@@ -1,0 +1,1 @@
+# pivotal-blog-example-parallax
