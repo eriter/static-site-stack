@@ -1,19 +1,7 @@
-###
-# Compass
-###
-
-# Susy grids in Compass
-# First: gem install susy
-# require 'susy'
-
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
 # end
-
-###
-# Page options, layouts, aliases and proxies
-###
 
 # Per-page layout changes:
 #
@@ -48,22 +36,17 @@
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
-
 set :fonts_dir, 'fonts'
 
-# Build-specific configuration
+configure :development do
+  activate :livereload, :grace_period => 0.5
+end
+
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
+  activate :minify_css
+  activate :minify_javascript
   activate :cache_buster
 
   # Use relative URLs
