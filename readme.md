@@ -7,13 +7,17 @@ A handy static site stack utilizing many favorites:
 * [Foreman](https://github.com/ddollar/foreman) Easy command line controls
 * [thin](http://code.macournoyer.com/thin/) web server
 * [Compass](http://compass-style.org/) SASS toolbox
+* [d3.js](http://d3js.org/) Data Representation Library
+* [nvd3](http://nvd3.org/) A nice set of d3 graphs
 
 ## Setup
 ```
 git clone https://github.com/wardpenney/static-site-stack.git
 bundle install
-bundle exec foreman start -f Procfile_development
+bundle exec foreman start -f Procfile_development -p 5555
 ```
+Then visit [localhost:5555](http://localhost:5555). Enjoy! And don't forget to turn on your LiveReload [Chrome Browser Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)!
+
 
 ## Deploy
 
