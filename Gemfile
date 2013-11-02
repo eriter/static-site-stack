@@ -3,11 +3,11 @@
 source 'http://rubygems.org'
 
 # Stack
-gem "middleman", "~>3.0.12"
-gem "middleman-livereload"
+gem 'middleman', '~>3.0.12'
+gem 'middleman-livereload'
 gem 'foreman'
 gem 'thin'
 
 
 # frontend
-gem "compass"
+gem 'compass'
