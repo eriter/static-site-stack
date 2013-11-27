@@ -16,9 +16,12 @@ Also contains several optional things you can turn on:
 * [jQuery](http://jquery.com/) Easy javascript
 
 ## Setup
+Clone the static-site-stack into your own repository and GO!
+
 ```
-git clone https://github.com/wardpenney/static-site-stack.git
-bundle install
+git clone https://github.com/wardpenney/static-site-stack.git my_new_project_name
+cd my_new_project_name
+bundle
 bundle exec middleman server
 ```
 Then visit [localhost:4567](http://localhost:4567). Enjoy! And don't forget to turn on your LiveReload [Chrome Browser Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)!
