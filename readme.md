@@ -24,7 +24,7 @@ cd my_new_project_name
 bundle
 bundle exec middleman server
 ```
-Then visit [localhost:4567](http://localhost:4567). Enjoy! And don't forget to turn on your LiveReload [Chrome Browser Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)!
+Then visit [localhost:4567](http://localhost:4567). Enjoy!
 
 
 ## Production Build
