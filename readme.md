@@ -57,3 +57,8 @@ This site ships with Source Sans Pro as an example and uses my handy [bullet-pro
 2. Include a `declare-font-face(...)` line for each variant, making sure to assign the proper font-weight and font-style to each, but keeping them in the same font-family (see default implementation there as an example)
 3. Declare a handy font-family variable in source/stylesheets/libraries/_settings.sass
 4. Style at will!
+
+### Reset
+This stack includes the Compass reset, and part of Groundworks's. We need Groundwork's box-sizing reset, but we don't need to reset all the elements, so we set the Groundwork variable $reset-elements to nothing. 
+
+The long story: Because we include Groundwork in an entirely searapte css load path (vendor.sass), it is difficult to stop the Groundwork reset from overwriting basic single-class styling. So, we just do the Compass reset in our custom styles load path (application.sass), so we rely on previous load-order specificity to not overwrite. 
