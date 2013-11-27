@@ -37,3 +37,14 @@ bundle exec middleman build
 
 * Registrar [DNSimple](https://dnsimple.com/) The best host ever for many reasons is actually pretty cheap also: **$3 for a couple of domains, or $8 for 10.**
 * Host [Fjords](http://fjords.cc/) Is a static site host with deployment handy commands for Middleman. It's a steal of a deal: monthly **$4 plus $2 per domain**. And you can deploy with one command: `bundle exec middleman fjords --rebuild`
+
+## Refernece
+### Colors
+I like to name my colors starting with $c- and then some name you choose. Often, I will use [ColourLovers.com](http://www.colourlovers.com) to create a palette, and this stack includes my [Alien Armor](http://www.colourlovers.com/palette/2871924/Alien_Armor) pallete by example. 
+
+When you add / change colors, I suggest you follow the this convention:
+
+1. Declare the color variable in source/stylesheets/libraries/_settings.scss
+2. Add it to the two color classes utility lists in source/stylesheets/sections/_colors.sass
+
+You will have the variable for use anywhere in the SASS codebase. Also you will get utility classes that begin with ".c-" for the CSS color rule and ".bc-" for the CSS background-color rule for use anywhere in the markup. 

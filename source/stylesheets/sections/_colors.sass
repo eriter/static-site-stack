@@ -1,0 +1,14 @@
+//
+// COLOR UTILITY CLASSES
+// .c-
+// .bc-
+//
+
+$color-list-names: 'c-write-it'  'c-e-m-ciorian'  'c-predator-blood'  'c-cant-express-myself' 'c-white' 'c-black'
+$color-list-values: $c-write-it  $c-e-m-ciorian   $c-predator-blood   $c-cant-express-myself  white   black
+
+@for $i from 1 through length($color-list-names)
+  .#{nth($color-list-names, $i)}
+    color: nth($color-list-values, $i)
+  .b#{nth($color-list-names, $i)}
+    background-color: nth($color-list-values, $i)
