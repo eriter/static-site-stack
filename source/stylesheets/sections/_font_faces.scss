@@ -1,0 +1,33 @@
+//
+// mixin for bullet proof font declaration syntax
+// http://pivotallabs.com/bulletproof-font-face-syntax-with-sass/
+//
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('/fonts/#{$font-filename}.eot');
+    src: url('/fonts/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/#{$font-filename}.woff') format('woff'),
+      url('/fonts/#{$font-filename}.ttf') format('truetype'),
+      url('/fonts/#{$font-filename}.svg##{$font-family}') format('svg');
+      font-weight: $font-weight;
+      font-style: $font-style;
+      font-stretch: $font-stretch;
+  }
+}
+
+//
+// DROP FILES (.eot, .woff, .ttf, .svg) INTO fonts/ FOLDER AND INCLUDE YOUR FONTS HERE
+//
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-extralight-webfont', 200);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-extralightit-webfont.', 200, italic);
+@include declare-font-face('Source Sans Pro', 'sourcesanspro-light-webfont', 300);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-lightit-webfont', 300, italic);
+@include declare-font-face('Source Sans Pro', 'sourcesanspro-regular-webfont', normal);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-it-webfont', normal, italic);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-semibold-webfont', 600);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-semiboldit-webfont', 600, italic);
+@include declare-font-face('Source Sans Pro', 'sourcesanspro-bold-webfont', bold);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-boldit-webfont', bold, italic);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-black-webfont', 800);
+// @include declare-font-face('Source Sans Pro', 'sourcesanspro-blackit-webfont', 800, italic);

@@ -46,7 +46,14 @@ I like to name my colors starting with $c- and then some name you choose. Often,
 
 When you add / change colors, I suggest you follow the this convention:
 
-1. Declare the color variable in source/stylesheets/libraries/_settings.scss
+1. Declare the color variable in source/stylesheets/libraries/_settings.sass
 2. Add it to the two color classes utility lists in source/stylesheets/sections/_colors.sass
 
 You will have the variable for use anywhere in the SASS codebase. Also you will get utility classes that begin with ".c-" for the CSS color rule and ".bc-" for the CSS background-color rule for use anywhere in the markup. 
+### Font Faces
+This site ships with Source Sans Pro as an example and uses my handy [bullet-proof font-face mixin](http://http://pivotallabs.com/bulletproof-font-face-syntax-with-sass/). Generally, I only include the weights as I need them and usually only end up with a few variants. To add fonts to your project:
+
+1. Drop the files (.eot, .woff, .ttf, .svg) into the /source/fonts directory
+2. Include a `declare-font-face(...)` line for each variant, making sure to assign the proper font-weight and font-style to each, but keeping them in the same font-family (see default implementation there as an example)
+3. Declare a handy font-family variable in source/stylesheets/libraries/_settings.sass
+4. Style at will!
