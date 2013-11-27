@@ -58,6 +58,24 @@ This site ships with Source Sans Pro as an example and uses my handy [bullet-pro
 3. Declare a handy font-family variable in source/stylesheets/libraries/_settings.sass
 4. Style at will!
 
+### File Structure
+This stack employs a simple file structure that separates non-rendering SASS (variables and mixins) away from rendering SASS (selectors and rules). This enables you to create divergent root SASS paths easily.
+
+Here is the SASS folder structure:
+
+* /source/stylesheets
+	* Contains the root SASS files (applicaiton and vendor.sass)
+* /source/stylesheets/libraries/
+	* This is where all your mixins and variables go for use in the site. Do not put anything that actually renders CSS here, otherwise it will double-render in each of the divergent load paths.
+* /source/stylesheets/sections/
+	* All other SASS can go here, and if you're doing it right, the order of include is arbitrary. 
+
+This is because we have set up a divergent load path for Groundwork to speed up time in development. 
+
+Groundwork is a great framework, but it relies heavily on @extend within nesting levels to work its magic. This isn't bad in the compiled result, but it can result in development compile times around 10 seconds. In a fast-paced frontend environment, this is pretty painful. The stack also utilizes LiveReload for instant page refreshing, so 10 seconds is a long time to wait once you switch windows!
+
+By diverging Groundwork into vendor.sass , it doens't need to get compiled every time. Most of your custom work will likely be in the application.sass tree, which loads FAST. You only suffer the 10 seconds if you alter something in the libraries folder, which are included in all divergent paths. 
+
 ### Reset
 This stack includes the Compass reset, and part of Groundworks's. We need Groundwork's box-sizing reset, but we don't need to reset all the elements, so we set the Groundwork variable $reset-elements to nothing. 
 
