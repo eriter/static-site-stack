@@ -39,6 +39,8 @@ bundle exec middleman build
 * Host [Fjords](http://fjords.cc/) Is a static site host with deployment handy commands for Middleman. It's a steal of a deal: monthly **$4 plus $2 per domain**. And you can deploy with one command: `bundle exec middleman fjords --rebuild`
 
 ## Refernece
+### Style Guide
+There is a style guide at the /style route. I stongly suggest you add to it as you create new things. Style-guide only classes are prefixed with ".s-" and are contained in source/stylesheets/sections/_style.sass.
 ### Colors
 I like to name my colors starting with $c- and then some name you choose. Often, I will use [ColourLovers.com](http://www.colourlovers.com) to create a palette, and this stack includes my [Alien Armor](http://www.colourlovers.com/palette/2871924/Alien_Armor) pallete by example. 
 
