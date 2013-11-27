@@ -40,6 +40,9 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
+# PRETTY URLS
+activate :directory_indexes
+
 configure :development do
   activate :livereload, :grace_period => 0.5
 end
