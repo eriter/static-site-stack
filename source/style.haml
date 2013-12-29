@@ -7,27 +7,4 @@ title: Style Gude
     .row
       .one.whole.padded
         %h1.c-white Style Guide
-.container
-  .row.bc-black.double-gap-top.padded
-    .one.whole
-      %h2.c-white Colors
-  .row
-    .one.fourth.align-right.pad-top
-      %h3 Brand Colors
-    .three.fourths
-      .one.third.padded
-        .s-color.c-black.bc-write-it $c-write-it
-      .one.third.padded
-        .s-color.c-white.bc-e-m-ciorian $c-e-m-ciorian
-      .one.third.padded
-        .s-color.c-black.bc-predator-blood $c-predator-blood
-      .one.third.padded
-        .s-color.c-white.bc-cant-express-myself $c-cant-express-myself
-  .row
-    .one.fourth.align-right.pad-top
-      %h3 Grays
-    .three.fourths
-      .one.third.padded
-        .s-color.c-white.bc-black $c-black
-      .one.third.padded
-        .s-color.c-blackbc-white $c-white
+= partial "markup_partials/style/section", locals: {section_header: "Colors", style_guide_partial: "markup_partials/style/colors/index", style_guide_partial_locals: {colors_list: ['c-write-it', 'c-e-m-ciorian', 'c-predator-blood', 'c-cant-express-myself']}}

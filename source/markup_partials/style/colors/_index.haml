@@ -1,0 +1,7 @@
+.row
+  .one.fourth.align-right.pad-top
+    %h3 Brand Colors
+  .three.fourths
+    - colors_list.each do |c|
+      .one.third.padded
+        .s-color.c-black{class: "b#{c}"}= "$-#{c}"
